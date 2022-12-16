@@ -1,6 +1,7 @@
 <template>
   <div id="main">
     pianku
+    {{ data }}
   </div>
 </template>
 

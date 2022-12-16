@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import App from "@/App";
 import PianKu from "@/components/PianKu";
 import TopNews from "@/components/TopNews";
+import Manage from "@/components/Manage";
+import Home from "@/components/Home";
 
 
 
@@ -14,14 +15,15 @@ const routes = [
     {
         path: '/',
         name: '大概框架',
-        component: App,
+        component: Manage,
         redirect:"/home",
         children:[
-            {path: 'home',name: '主页',component:App},
+            {path: 'home',name: '主页',component:Home},
             {path: 'movie',name: '片库',component:PianKu},
             {path: 'top',name: '排行榜',component:TopNews},
         ]
     },
+    // {path: 'aside',name: '导航',component:Aside},
     // {
     //     path: '/about',
     //     name: 'about',
