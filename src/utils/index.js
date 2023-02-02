@@ -4,6 +4,7 @@ import PianKu from "@/components/PianKu";
 import TopNews from "@/components/TopNews";
 import Manage from "@/components/Manage";
 import Home from "@/components/Home";
+import Alist from "@/Alist.vue";
 
 
 
@@ -21,6 +22,7 @@ const routes = [
             {path: 'home',name: '主页',component:Home},
             {path: 'movie',name: '片库',component:PianKu},
             {path: 'top',name: '排行榜',component:TopNews},
+            {path: 'alist',name: '流媒体播放器',component:Alist},
         ]
     },
     // {path: 'aside',name: '导航',component:Aside},
@@ -40,6 +42,9 @@ const routes = [
     //     component:Register
     // }
 ]
+let head = document.getElementsByTagName('head');let meta = document.createElement('meta');meta.name = 'referrer';//根据实际情况修改referrer的值，可选值参考上文
+meta.content = 'no-referrer';head[0].appendChild(meta);
+
 
 const router = new VueRouter({
     mode: 'history',
